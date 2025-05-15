@@ -1,0 +1,91 @@
+import java.util.*;
+
+public class Book{
+	private int nrParts;
+	private String Editor;
+	private String Publication_Date;
+	private int ISBN;
+	vector<Part> parts;
+
+	public Book(int nrP, String e, String pd, int i){
+		this.nrParts = nrP;
+		this.Editor = e;
+		this.Publication_Date = pd;
+		this.ISBN = i;
+	}
+
+	public int getNrParts {return nrParts;}
+	public String getEditor {return Editor;}
+	public String getPublicationDate {return Publication_Date;}
+	public int getISBN {return ISBN;}
+
+	public void setNrParts {}
+	public void setEditor {}
+	public void setPublicationDate {}
+	public void setISBN {}
+
+	public void addPart(Part part){
+		parts.add(part);		
+	}
+}
+
+public class Part: extends General_Specifications{
+	private int nrChapters;
+	vector<Chapter> chapters;
+
+	public Part(int nrC, int nr, String t){
+		this.nrChapters = nrC;
+		super(nr, t);
+	}
+
+	public int getnrChapters(){return this.nrChapters;}
+	public void setnrChapters(){}
+	
+	public void addChapter(Chapter chapter){
+		chapters.add(chapter);
+	}
+}
+
+public class Chapter: extends General_Specifications{
+	private int nrSections;
+	private String Rezumat;
+	vector<Section> sections;
+
+	public Part(int nrS, String rez, int nr, String t){
+		this.nrChapters = nrS;
+		this.Rezumat = rez;
+		super(nr, t);
+	}
+
+	public int getnrSections(){return this.nrSections;}
+	public void setnrSections(){}
+	public String getRezumat(){return this.Rezumat;}
+	public void setRezumat(){}
+
+	public void addSection(Section section){
+		sections.add(section);
+	}
+}
+
+public class Section: extends General_Specifications{
+
+	public Part(int nr, String t){
+		super(nr, t);
+	}
+}
+
+public class General_Specifications{
+	private int number;
+	private String Title;
+
+	public General_Specifications(int nr, String t){
+		this.number = nr;
+		this.Title = t;
+	}
+
+	public int getNumber(){return number;}
+	public String getTitle(){return Title;}
+	public void setNumber(){}
+	public void setTitle(){}
+}
+
