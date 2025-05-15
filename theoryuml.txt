@@ -1,0 +1,47 @@
+2.	UML, also known as "Unified Modelling Language", is now 1 of the most widespread graphical object-oriented modelling languages in the world. 
+	It's a general purpose modelling language (its use isn't restricted to a specific application area). 
+	UML can be used consistently across the entire software development process, the same language being used in the same notation across all stages of development.
+
+3.	UML models represent systems at different levels of detail, some of these describing a system from a higher, more abstract level, while others providing 
+	greater detail. UML models contain model elements, such as actors, use cases, classes and packages / 1 or more diagrams that show a specific perspective 
+	of a system. 
+	
+	UML models can be used for the following purposes:
+		- visually represent the system that you want to build ;
+		- communicate your vision of a system to custommers and colleagues ;
+		- develop and test the architecture of the system ;
+		- use the UML diagrams to direct code generation .
+
+5.	There are 2 main types of diagrams presented:
+		- The structure diagram, which is used for modelling the structure of a system from diverse perspectives. There are 7 subtypes for the structure 
+		  diagrams:
+				1)	Class Diagram ;
+				2)	Object Diagram ;
+				3)	Package Diagram ;
+				4)	Component Diagram ;
+				5)	Composition Structure Diagram ;
+				6)	Deployment Diagram ;
+				7)	Profile Diagram .
+
+		- The behaviour diagram, which is used for building the infrastructure that enables the user to define behaviour in detail. There are 7 subtypes for 
+		  the behaviour diagram as well:
+				1)	Use Case Diagram ;
+				2)	State Machine Diagram ;
+				3)	Activity Diagram ;
+				4)	Sequence Diagram ;
+				5)	Communication Diagram ;
+				6)	Timing Diagram ;
+				7)	Interaction Overview Diagram .
+
+6.	The class diagram is one of the most used diagrams, the concept used being represented by object-oriented development, used for specifying the data and object 
+	structure of a system (class, generalization and association).
+
+	The use case diagram defines the system's requirements by showing which users interact with which functionalities (use cases).
+
+	The activity diagram models various processes, including business and software processes, illustrating actions that are deemed necessary (student participating in a lecture / assignment).
+
+	The sequence diagram models interactions between objects to completa a task, focusing on the chronological order of exchanged messages.
+
+	
+
+	

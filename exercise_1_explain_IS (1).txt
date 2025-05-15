@@ -1,0 +1,35 @@
+1.	Identification of concepts:
+
+Professor ; Student ; Student with Tax ; Secretary ; Grade ; Report ; Authentification
+
+2.	Classes for the class diagram:
+
+Professor ; Student ; Student with Tax ; Secretary ; Grade ; Report ; Authentification
+
+3.	Concepts which are specializations of other general concepts:
+
+Student with Tax -> specialization of the Student class, the relationship being one of inheritance
+
+4.	Concepts grouped in collections of the same type:
+
+The "Professor", "Student" and "Report" concepts contain many "Grade" concepts
+The "Professor" concept distributes many "Report" concepts
+The "Secretary" generates many "Report" concepts
+
+5.	Significant attributes for each class:
+
+Professor: {int id, String name, String email, List<Grade> gradesGiven, List<Report> reports}
+Student: {int id, String name, String email, List<Grade> gradesReceived}
+StudentWithTax: {float tax;}
+Secretary: {int id, String name, String email, List<Report> reports}
+Grade: {int id, float value, int day, int month, int year, Student student, Professor professor}
+Report: {int id, List<Grade> grades}
+Authentification: {String user, String password}
+
+6.	Conceptual relations:
+
+Professor -> Grade: 1 to N
+Student -> Grade: 1 to N
+Secretary -> Report: 1 to N
+Professor -> Report: 1 to N
+Authentification -> User: 1 to 1

@@ -1,0 +1,225 @@
+Ex1:
+-----
+
+interface Produs{
+	public cumpara();
+	public vinde ();
+	public float getPret();
+}
+
+class Revista implements Produs{
+	private Articol articol;
+	public Revista() {}
+	public cumpara() {}
+	public vinde() {}
+	public float getPret() {}
+}
+
+class Carte implements Produs{
+	private String titlu;
+	private String autor;
+	private float pret;
+	private Capitol capitol;
+	
+	public Produs() {}
+	public cumpara() {}
+	public vinde() {}
+	public float getPret() {}
+}
+
+class Articol{
+	public Articol() {}
+}
+
+class Capitol{
+	public Capitol() {}
+}
+
+
+
+Ex1: (d) deoarece, asa cum se vede din codul de mai sus, conditiile raspunsului sunt implinite
+
+-------------------------------------------------------------------------------------------------------------
+
+Ex2:
+----
+
+class Revista implements Produs{
+	private Collection<Articol> capitole = new Collection();
+	public Revista() {}
+	public cumpara() {}
+	public vinde() {}
+	public float getPret() {}
+}
+
+Ex2: (c) deoarece clasele revista si capitol se afla intr-o relatie de compozitie
+     (f) deoarece linia de cod a subpunctului este deja implementata in segmentul de cod
+
+---------------------------------------------------------------------------------------------------------------
+
+Ex3:
+----
+
+class Proiect{
+	private Collection<DiagramaUML> diagrams = new Collection();
+	private Student student;
+	private CodSursa code;
+	private String name;
+	private Date deadline;
+	private int grade;
+
+	public void setGrade(int g) {}
+	public int getGrade() {}
+}
+
+class Student{public Student() {}}
+class DiagramaUML{public DiagramaUML() {}}
+class CodSursa{
+	public CodSursa() {}
+	private Proiect proiect;
+}
+
+Ex3: (a) deoarece linia de cod deja a fost implementata in codul de mai sus  ; (c) datorita aceluiasi lucru ca la raspunsul precedent ; (g) datorita aceluiasi lucru
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex4: 
+----
+
+class Student{
+	public Student() {}
+	private Collection<Proiect> projects = new Collection();
+	public void adaugaProiect();
+}
+
+class StudentBursier extends Student{
+	public StudentBursier() {}
+}
+
+class Proiect{
+	private String curs;
+	public Proiect() {}
+}
+
+Ex4: asa cum a fost evidentiat in codul de mai sus: b, d, f sunt raspunsurile corecte
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex5:
+----
+
+class Profesor{
+	private Materie preda;
+
+	public Profesor() {}
+}
+
+class Materie{
+	private Collection<Curs> courses = new Collection();
+	private Collection<Laborator> labs = new Collection();
+	private Collection<Test> tests = new Collection();
+
+	public Materie() {} 
+}
+
+class Curs{private Materie materie;
+public Curs() {}}
+class Laborator{private Materie materie;
+public Laborator() {}}
+class Test{private Materie materie;
+public Test() {}}
+
+(b) deoarece este o relatie de asociere unidirectionala, cu alte cuvinte numai clasa "Profesor" poate declara variabile de tip "Materie"
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex6:
+----
+
+(a), (e) datorita relatiei de compozitie dintre Curs, Laborator, Test si Materie
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex7:
+----
+
+(c) datorita clasele Materie si Laborator sunt intr-o relatie de compozitie
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex8:
+----
+
+(d) explicatia poate fi vazuta in codul implementat mai sus
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex9:
+----
+
+(b) deoarece pret este un atribut notat cu '-'<=>'private', (d) deoarece este o operatie din cadrul interfetei, (e) deoarece clasa "Carte " si clasa "Produs" se afla intr-o relatie de realizare, (i) deoarece clasele "Carte" si "Capitol" au o relatie de compozitie
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex10:
+----
+
+abstract class Angajat{
+	private String nume;
+	private int CNP;
+
+	public Angajat(String n, int cnp) {this.nume = n; this.CNP = cnp;}
+	public abstract void calculPlata() {}
+}
+
+class AngajatCuOra extends Angajat{
+	public AngajatCuOra() {}
+}
+
+class AngajatCuComision extends Angajat{
+	public AngajatCuComision() {}
+}
+
+(b), deoarece clasa Angajat este abstracta datorita faptului a metoda calculPlata() e abstracta
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Ex11:
+----
+
+(a) deoarece clasele Angajat si AngajatCuOra se afla intr-o relatie de generalizare, (d) deoarece operatia 'calculPlata()' este notat cu '+'
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex12:
+----
+
+class Rezervare{
+	private static int urmatorulCod = 1;
+	private String tipMasina;
+	private Client client;
+
+	public Rezervare(int cod, String tip, Client c) {this.urmatorulCod = cod; this.tipMasina = tip; this.client = c;}
+	public static int getUrmatorulCod() {return this.urmatorulCod;}
+	public Client getClient() {return this.client;}
+}
+
+class Client{
+	private String nume;
+	private int CNP;
+	private String tipCard;
+	private Rezervare rezervare;
+
+	public Client(String n, int cnp, String tipC, Rezervare r) {this.nume = n; this.CNP = cnp; this.tipCard = tipC; this.rezervare = r;}
+}
+
+(c), (d), (e) explicatia este gasita in codul de mai sus
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Ex13: (c), (e) datorita relatiilor din cadrul diagramei
+
+
+
+

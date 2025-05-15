@@ -1,0 +1,19 @@
+Use Case 1: Registration of new user
+
+User -> System: Sends personal data
+System -> User: data validation
+
+Use Case 2: Available cars visualization
+
+User -> System: select preferred location & period
+System -> User: displays list of available cars
+
+Use Case 3: Rent car
+
+User -> System: choose car and completes renting details
+System -> User: confirm availability, solicit payment, confirm reservation / refusal of reservation
+
+Use Case 4: Return car
+
+User -> System: notify the system about returning the car
+System -> User: display return details
